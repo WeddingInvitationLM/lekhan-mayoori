@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lekhan & Mayoori | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#ece8df;--brown:#5a3a28;--tan:#c9a98a;--rose:#e9d6c3;--ink:#4a3526}
+*{box-sizing:border-box;margin:0}
+body{background:#d9d4ca;font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);text-align:center}
+.page{max-width:480px;margin:0 auto;background:var(--paper);padding:36px 0 28px;overflow:hidden}
+h1,h2,h3{font-family:'Marcellus',Georgia,serif;font-weight:400}
+.label{font-family:'Marcellus',serif;letter-spacing:.14em;font-size:.8rem;margin-bottom:22px}
+.hero{padding:0 24px 56px}
+.env{position:relative;width:250px;margin:0 auto}
+.env .photo{width:190px;height:190px;object-fit:cover;background:var(--rose);border:6px solid #fff;display:block;margin:0 auto -60px;position:relative;z-index:1;transform:rotate(-3deg)}
+.env .flap{background:var(--brown);height:140px;border-radius:0 0 8px 8px;position:relative;z-index:2;clip-path:polygon(0 0,50% 40%,100% 0,100% 100%,0 100%)}
+.seal{position:absolute;z-index:3;left:50%;top:92px;width:38px;height:38px;border-radius:50%;background:#a07c4e;transform:translateX(-50%);box-shadow:inset 0 0 0 4px #b8935f}
+.names-big{font-size:2.3rem;line-height:1.4;margin-top:34px;color:var(--ink)}
+.rosette{position:absolute;width:90px;height:90px;pointer-events:none}
+.card{position:relative;background:var(--brown);color:#f3ebe0;margin:0 40px;padding:36px 22px 40px;border-radius:12px;box-shadow:0 6px 18px rgba(60,35,20,.3)}
+.card .parents{display:flex;gap:14px;font-size:.72rem;line-height:1.5;margin-bottom:26px;justify-content:center}
+.card .parents div{flex:1;padding:0 6px}
+.card .parents div+div{border-left:1px solid rgba(255,255,255,.3)}
+.card h2{font-size:2.2rem;line-height:1.5}
+.card .event{margin-top:26px;font-size:1rem;opacity:.85}
+.dt{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:14px}
+.dt .day{font-family:'Marcellus',serif;font-size:2.4rem}
+.dt .sep{width:1px;height:40px;background:rgba(255,255,255,.4)}
+.dt .mo{text-align:left;font-size:.9rem;line-height:1.3}
+.dt .meta{font-size:.78rem;opacity:.8;line-height:1.4}
+section{padding:54px 24px 0}
+.gallery{display:grid;gap:14px;max-width:300px;margin:0 auto}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--rose);border-radius:6px;display:block}
+.cal{background:var(--paper);color:var(--ink);border-radius:8px;margin:22px auto 0;padding:16px;max-width:250px}
+.cal h4{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:1.15rem;margin-bottom:8px}
+.cal table{width:100%;border-collapse:collapse;font-size:.78rem}
+.cal td,.cal th{padding:5px 0;font-weight:400}
+.cal th{opacity:.5;font-size:.7rem}
+.cal .on span{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:var(--brown);color:#fff}
+.addcal{display:inline-block;margin-top:14px;color:#f3ebe0;font-size:.85rem;text-decoration:underline;background:none;border:0;cursor:pointer;font-family:inherit}
+iframe{width:100%;max-width:340px;height:230px;border:0;border-radius:6px;margin-top:14px}
+.dir{display:inline-block;margin-top:14px;color:var(--ink);font-size:.95rem}
+.foot{margin-top:40px;font-size:.9rem;font-style:italic}
+a:focus-visible,button:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hero">
+  <p class="label">SAVE THE DATE</p>
+  <div class="env">
+    <img class="photo" src="photo1.jpg" alt="" onerror="this.removeAttribute('src')">
+    <div class="flap"></div><div class="seal"></div>
+    <svg class="rosette" style="left:-50px;top:50px" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#d9bfa3"/><circle cx="50" cy="50" r="32" fill="#e9d6c3"/><circle cx="50" cy="50" r="18" fill="#c9a98a"/><circle cx="50" cy="50" r="7" fill="#8a5f3f"/></svg>
+    <svg class="rosette" style="right:-50px;top:110px;width:80px;height:80px" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#d9bfa3"/><circle cx="50" cy="50" r="30" fill="#f1e4d4"/><circle cx="50" cy="50" r="14" fill="#c9a98a"/></svg>
+  </div>
+  <div class="names-big"><span id="a1">Lekhan</span><br><span id="b1">Mayoori</span></div>
+</div>
+
+<div class="card">
+  <div class="parents">
+    <div>Mr. Father's Name<br>Mrs. Mother's Name</div>
+    <div>Mr. Father's Name<br>Mrs. Mother's Name</div>
+  </div>
+  <h2><span id="a2">Lekhan</span><br><span id="b2">Mayoori</span></h2>
+  <p class="event">Wedding Muhurtham</p>
+  <div class="dt">
+    <div class="meta">AT 10:00 AM<br>SUNDAY</div>
+    <div class="day">15</div><div class="sep"></div>
+    <div class="mo">NOVEMBER<br>2026</div>
+  </div>
+</div>
+
+<section>
+  <p class="label">PHOTO GALLERY</p>
+  <div class="gallery">
+    <img src="photo2.jpg" alt="Lekhan and Mayoori" onerror="this.removeAttribute('src')">
+    <img src="photo3.jpg" alt="Lekhan and Mayoori" onerror="this.parentNode.removeChild(this)">
+  </div>
+</section>
+
+<section>
+  <div class="card" style="margin:0">
+    <p class="label" style="color:#f3ebe0">RECEPTION</p>
+    <h3 style="font-size:1.2rem;letter-spacing:.04em;line-height:1.5">THE RECEPTION WILL TAKE PLACE AT:</h3>
+    <div class="dt">
+      <div class="meta">1:00 PM<br>SUNDAY</div>
+      <div class="day">15</div><div class="sep"></div>
+      <div class="mo">NOVEMBER<br>2026</div>
+    </div>
+    <div class="cal"><h4>November 2026</h4><table id="cal"></table></div>
+    <button class="addcal" id="ics">Add to Calendar</button>
+  </div>
+</section>
+
+<section>
+  <p class="label">WEDDING RECEPTION VENUE</p>
+  <p id="vn">Kurunji Janaki Convention Centre</p>
+  <iframe id="map" loading="lazy" title="Venue map"></iframe><br>
+  <a class="dir" id="dir" target="_blank" rel="noopener">Get directions</a>
+  <p class="foot">Your presence would be the greatest gift we could receive.</p>
+</section>
+
+</div>
+
+<script>
+/* ====== EDIT YOUR DETAILS HERE ====== */
+const W = {
+  venue: "Kurunji Janaki Convention Centre",
+  mapQuery: "Kurunji Janaki Convention Centre",   // replace with the exact venue name/address
+  eventTitle: "Lekhan & Mayoori Wedding Reception"
+};
+/* ==================================== */
+const q = encodeURIComponent(W.mapQuery);
+document.getElementById('vn').textContent = W.venue;
+document.getElementById('map').src = `https://www.google.com/maps?q=${q}&output=embed`;
+document.getElementById('dir').href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+
+// November 2026 calendar (1 Nov is a Sunday)
+let h = '<tr>' + ['Su','Mo','Tu','We','Th','Fr','Sa'].map(d=>`<th>${d}</th>`).join('') + '</tr><tr>';
+let first = new Date(2026,10,1).getDay();
+for (let i=0;i<first;i++) h += '<td></td>';
+for (let d=1, c=first; d<=30; d++, c++) {
+  if (c && c%7===0) h += '</tr><tr>';
+  h += d===15 ? `<td class="on"><span>${d}</span></td>` : `<td>${d}</td>`;
+}
+document.getElementById('cal').innerHTML = h + '</tr>';
+
+document.getElementById('ics').onclick = () => {
+  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
+    'DTSTART:20261115T073000Z','DTEND:20261115T103000Z',   // 1:00 PM IST
+    'SUMMARY:'+W.eventTitle,'LOCATION:'+W.venue,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));
+  a.download = 'wedding-reception.ics'; a.click();
+};
+</script>
+</body>
+</html>
