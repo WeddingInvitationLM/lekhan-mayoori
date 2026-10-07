@@ -43,6 +43,10 @@ section{padding:54px 24px 0}
 iframe{width:100%;max-width:340px;height:230px;border:0;border-radius:6px;margin-top:14px}
 .dir{display:inline-block;margin-top:14px;color:var(--ink);font-size:.95rem}
 .foot{margin-top:40px;font-size:.9rem;font-style:italic}
+#music{position:fixed;right:14px;top:50%;z-index:10;width:44px;height:44px;border-radius:50%;border:0;background:var(--brown);color:#f3ebe0;font-size:1.2rem;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+#music.on{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){#music.on{animation:none}}
 a:focus-visible,button:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
 </style>
 </head>
@@ -106,6 +110,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tan);outline-offset
 
 </div>
 
+<audio id="song" src="song.mp3" loop preload="auto"></audio>
+<button id="music" aria-label="Play or pause music" title="Play music">&#9835;</button>
+
 <script>
 /* ====== EDIT YOUR DETAILS HERE ====== */
 const W = {
@@ -128,6 +135,21 @@ for (let d=1, c=first; d<=30; d++, c++) {
   h += d===15 ? `<td class="on"><span>${d}</span></td>` : `<td>${d}</td>`;
 }
 document.getElementById('cal').innerHTML = h + '</tr>';
+
+// Background music: browsers block autoplay, so it starts on the first tap anywhere
+const song = document.getElementById('song'), mb = document.getElementById('music');
+const setOn = on => { mb.classList.toggle('on', on); mb.title = on ? 'Pause music' : 'Play music'; };
+mb.onclick = e => {
+  e.stopPropagation();
+  if (song.paused) song.play().then(() => setOn(true)).catch(() => {}); else { song.pause(); setOn(false); }
+};
+let tried = false;
+document.addEventListener('pointerdown', e => {
+  if (e.target.closest('#music')) return;
+  if (tried) return; tried = true;
+  song.play().then(() => setOn(true)).catch(() => {});
+});
+song.addEventListener('error', () => { mb.style.display = 'none'; });
 
 document.getElementById('ics').onclick = () => {
   const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
